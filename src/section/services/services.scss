@@ -1,0 +1,30 @@
+@use "../../sass/" as *;
+
+.services {
+  padding-top: rem(180);
+  padding-bottom: rem(100);
+  background-color: $white-clr;
+  &__content {
+    margin-bottom: rem(100);
+    text-align: center;
+    h1 {
+      margin-top: rem(30);
+      font-size: rem(60);
+      font-weight: bold;
+    }
+  }
+  &__card {
+    @include grid(4, 15);
+  }
+  @include tablet {
+    &__card {
+      @include grid(2, 15);
+    }
+  }
+  @include mobile {
+    margin-top: rem(800);
+    &__card {
+      @include grid(1, 15);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../sass/" as *;
+
+.one-pro {
+  cursor: pointer;
+  width: 101%;
+  img {
+    border-radius: rem(18);
+    height: rem(380);
+    object-fit: cover;
+  }
+}

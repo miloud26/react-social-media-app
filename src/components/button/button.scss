@@ -1,0 +1,17 @@
+@use "../../sass/" as *;
+
+.btn {
+  button {
+    padding: $padding-btn;
+    border-radius: $border-radius;
+    text-align: center;
+    font-size: rem(19);
+    letter-spacing: rem(1.2);
+    background: #111f3e8f;
+    color: $white-clr;
+    transition: 0.6s;
+    &:hover {
+      background-color: $second-clr;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@use "../../sass/" as *;
+
+.about {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: rem(150);
+  background: $main-clr;
+  padding-bottom: 0;
+  &__first {
+    height: 50vh;
+    background: $main-clr;
+    padding-top: rem(180);
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  &__content {
+    @include flex(center, space-between, 0);
+    background: $yollow-clr;
+    border-radius: rem(25);
+    padding: rem(50);
+    box-shadow: 10px 50px 80px 0px rgb(225 198 86 / 30%);
+    &__write {
+      &__btn {
+        button {
+          transition: 0.6s;
+          background-color: $second-clr;
+          &:hover {
+            background-color: $main-clr;
+          }
+        }
+      }
+      &__intro {
+        .divider {
+          margin-bottom: rem(40);
+          color: $main-clr !important;
+          &::before {
+            background-color: $main-clr;
+          }
+        }
+      }
+      width: 50%;
+      letter-spacing: $let-spc;
+      h1 {
+        font-size: rem(40);
+        color: #111f3e;
+        font-weight: 800;
+        margin-bottom: rem(20);
+      }
+      h2 {
+        font-size: rem(30);
+        color: #111f3e;
+        font-weight: 500;
+        margin-bottom: rem(30);
+      }
+      p {
+        font-size: rem(18);
+        text-transform: lowercase;
+        padding-right: rem(40);
+        margin-bottom: rem(70);
+      }
+    }
+    &__card {
+      width: 50%;
+      font-size: 60px;
+      color: white;
+      @include grid(2, 12);
+      .card-services {
+        &__title {
+          margin-bottom: rem(-3);
+        }
+
+        color: $main-clr;
+        gap: rem(15);
+        &__arrow {
+          display: none;
+        }
+      }
+    }
+  }
+  &__second {
+    height: 50vh;
+    background-color: $white-clr;
+  }
+
+  @include tablet {
+    margin-bottom: rem(150);
+    &__content {
+      flex-wrap: wrap;
+      &__write {
+        width: 100%;
+        margin-bottom: rem(150);
+      }
+      &__card {
+        width: 100%;
+      }
+    }
+  }
+  @include mobile {
+    padding-top: rem(400);
+    &__content {
+      margin-top: rem(550);
+
+      flex-wrap: wrap;
+      &__write {
+        width: 100%;
+        margin-bottom: rem(150);
+      }
+      &__card {
+        width: 100%;
+        @include grid(1, 12);
+      }
+    }
+  }
+}

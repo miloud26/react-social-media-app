@@ -1,0 +1,20 @@
+@use "./mixin" as *;
+
+$main-clr: #6c3cdc;
+$white-clr: #f8f3ff;
+$light-clr: rgba(#f8f3ff, 0.6);
+$second-clr: #f44571;
+$yollow-clr: #ffd046;
+$black-clr: #222;
+$back-clr: linear-gradient(
+  71deg,
+  rgba(108, 60, 220, 1) 0%,
+  rgba(160, 103, 255, 1) 100%
+);
+$let-spc: rem(1.6);
+$padding-btn: rem(17) rem(46) rem(17) rem(46);
+$border-radius: rem(14);
+$mobile-width: rem(600);
+$tablet-width: rem(1025);
+
+$font-family: "Dosis", sans-serif;

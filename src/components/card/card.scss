@@ -1,0 +1,39 @@
+@use "../../sass/" as *;
+
+.card {
+  width: 100%;
+  padding: rem(25);
+  border-radius: rem(36);
+  overflow: hidden;
+  background-color: $second-clr;
+  @include flex(center, center, 15);
+  flex-direction: column;
+  transition: all 0.7s;
+  transition: 0.6s;
+  &:hover {
+    background-color: $main-clr;
+    .skills__svg {
+      background-color: $white-clr;
+      color: $main-clr;
+    }
+  }
+  font-size: rem(26);
+  .skills__svg {
+    font-weight: bold;
+    transition: 0.6s;
+    @include flex(center, center, 0);
+    width: rem(50);
+    height: rem(50);
+    border-radius: 50%;
+    padding: rem(50);
+    background-color: $yollow-clr;
+  }
+  .skills__title {
+    font-size: rem(30);
+    font-weight: bold;
+  }
+  .skills__text {
+    font-size: rem(25);
+    text-align: center;
+  }
+}
